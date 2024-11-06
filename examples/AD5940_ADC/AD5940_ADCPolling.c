@@ -59,8 +59,8 @@ void AD5940_Main(void)
   
   /* Initialize ADC basic function */
   AD5940_AFECtrlS(AFECTRL_DACREFPWR|AFECTRL_HSDACPWR, bTRUE); //We are going to measure DAC 1.82V reference.
-  adc_base.ADCMuxP = ADCMUXP_VREF1P8DAC;
-  adc_base.ADCMuxN = ADCMUXN_VSET1P1;
+  adc_base.ADCMuxP = ADCMUXP_AIN0; // ADCMUXP_VREF1P8DAC;
+  adc_base.ADCMuxN = ADCMUXN_AIN3; // ADCMUXN_VSET1P1;
   adc_base.ADCPga = ADCPGA_GAIN_SEL;
   AD5940_ADCBaseCfgS(&adc_base);
   
